@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    background-color: rgb(37, 37, 37);
+}
+
+.sample-container {
+    position: relative;
+}
+
+.top-bar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(37, 37, 37);
+}
+
+.top-bar img {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(0, -50%);
+    opacity: .5;
+}
+
+
+.banner-container {
+    position: relative;
+    background-color: rgb(37, 37, 37);
+    height: 175px;
+    color: rgb(185, 185, 185);
+
+}
+
+.name-banner {
+    position: relative;
+    letter-spacing: .1em;
+    text-align: center;
+    top: 25%;
+    font-size: 6vw;
+    line-height: 10vw;
+}
+
+.title-banner {
+    position: relative;
+    text-align: center;
+    font-size: .6em;
+    letter-spacing: 1vw;
+    padding-top: 1vw;
+    color: slategray;
+}
+
+.navigation-container {
+    position: relative;
+    height: 70vw;
+    text-align: center;
+    animation: drop .8s ease-out both, fade .8s ease-out both, front 5s forwards;
+    z-index: -2;
+}
+
+.navigation-container button {
+    min-width: 55%;
+    min-height: 15vw;
+    background-color: rgb(37, 37, 37);
+    color: rgb(186, 189, 192);
+    border: none;
+    font-size: 1.2em;
+    letter-spacing: .2em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    
+}
+.navigation-container button:focus {
+    outline: none;
+}
+
+.navigation-container button:active {
+    border-bottom: 2px solid rgba(243, 168, 47);
+}
+
+.navigation-container ul {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#logo-container {
+    background-color: teal;
+    background-color: rgb(37, 37, 37);
+    text-align: right;
+}
+
+@keyframes front {
+    to {z-index: 1;}
+}
+
+@keyframes drop {
+    from {transform: translateY(-200px);}
+    to {transform: translateY(0);}
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#coffee {
+    padding-top: 3em;
+    /* background-color: skyblue; */
+    position:relative;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(37, 37, 37);
+    z-index: -1;
+}
+
+.cup{
+    position: absolute;
+    background: silver;
+    border: .25em solid slategray;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 3rem;
+    height: 3rem;
+    outline: 0;
+    overflow: none;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.cup-line {
+    position: absolute;
+    border: 0.25rem solid slategrey;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 3rem;
+    height: 3rem;
+    outline: 0;
+    overflow: none;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.cup::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(37, 37, 37);
+    width: 200%;
+    height: 200%;
+    top: -80px;
+    left:-50%;
+    border-radius: 40px;
+    
+    animation: spin 8s linear infinite;
+}
+
+.handle {
+    position: absolute;
+    width: 1rem;
+    height: 1.7rem;
+    background-color: slategrey;
+    left: 59%;
+    top: 55px;
+    transform: translate(-50%, 0);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.handle-hole {
+    position: absolute;
+    width: .5rem;
+    height: 1rem;
+    background-color: rgb(37, 37, 37);
+    left: 59%;
+    top: 60px;
+    transform: translate(-50%, 0);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
