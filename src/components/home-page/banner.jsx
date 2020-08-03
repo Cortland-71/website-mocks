@@ -59,8 +59,8 @@ const Banner = () => {
                 </Suspense>
             </Canvas>
             <Grid container direction='column' alignItems='center' className={classes.overlay}>
-                <Typography color='textPrimary' className={classes.bannerText} variant='h1'>Cortland</Typography>
-                <Typography color='textPrimary' className={classes.bannerText} variant='h1'>Carrillo</Typography>
+                <Typography className={classes.bannerText} variant='h1'>Cortland</Typography>
+                <Typography className={classes.bannerText} variant='h1'>Carrillo</Typography>
                 <Typography color='textSecondary' className={classes.bannerText} variant='h3'>{'{Java Developer}'}</Typography>
             </Grid>
         </Grid>

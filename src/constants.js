@@ -1,8 +1,7 @@
 const primaryMain = '#708090';
-const primaryLight = '#CCCCCC';
+const primaryLight = '#cccccc';
 const primaryDark = '#333333';
-const primaryText = 'rgb(185, 185, 185)';
-const secondaryText = 'rgb(112,128,144)';
+const secondaryMain = '#f3a82f';
 const fontFamily = [
     '"Source Code Pro"', 'monospace'
 ];
@@ -11,7 +10,6 @@ export {
     primaryDark,
     primaryMain,
     primaryLight,
-    primaryText,
-    secondaryText,
+    secondaryMain,
     fontFamily
 };

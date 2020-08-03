@@ -1,5 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import {primaryLight, primaryDark, primaryMain, primaryText, secondaryText, fontFamily} from './constants';
+import {primaryLight, primaryDark, primaryMain, secondaryMain, fontFamily} from './constants';
 
 let customTheme = createMuiTheme({
     palette: {
@@ -10,8 +10,8 @@ let customTheme = createMuiTheme({
             dark: primaryDark
         },
         text: {
-            primary: primaryText,
-            secondary: secondaryText
+            primary: 'white',
+            secondary: secondaryMain
         }
     },
     typography: {

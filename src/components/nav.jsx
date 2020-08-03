@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
-import { Drawer, List, ListItem, ListItemText, Button } from '@material-ui/core';
+import { Drawer, List, ListItem, ListItemText, Button, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+
+const useStyles = makeStyles(theme => ({
+    navButton: {
+        minWidth: '180px',
+        paddingLeft: theme.spacing(3)
+    }
+}));
 
 const navLinks = [
     { to: '/', key: 'home', primary: 'Home' },
@@ -12,6 +19,7 @@ const navLinks = [
 
 const Nav = props => {
     const { navOpen, setNavOpen } = props;
+    const classes = useStyles();
     return (
         <Drawer anchor='left'
             onClose={() => setNavOpen(false)}
@@ -22,6 +30,7 @@ const Nav = props => {
                         component={Link}
                         to={item.to}
                         onClick={() => setNavOpen(false)}
+                        className={classes.navButton}
                         button>
                         <ListItemText primary={item.primary} />
                     </ListItem>)
