@@ -1,20 +1,19 @@
 import React from 'react';
-import '../styleIdea1.css';
-import Top from '../top';
-import Banner from './banner';
-import Coffee from './coffee';
-import Nav from './nav';
+import { makeStyles, Box, Grid } from "@material-ui/core";
+import MemoizedBanner from './banner';
 
+const useStyles = makeStyles(theme => ({
+    rootContainer: {
+        height: 'calc(100% - 65px)'
+    }
+}));
 
 const Home = () => {
+    const classes = useStyles();
     return (
-        <div className="sample-container">
-            <Top />
-            <Coffee />
-            <Banner />
-            
-            <Nav />
-        </div>
+        <Box component={Grid} className={classes.rootContainer} container direction="column" justify="flex-start">
+            <MemoizedBanner />
+        </Box>
     )
 }
 export default Home;
